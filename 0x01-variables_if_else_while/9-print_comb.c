@@ -12,8 +12,8 @@ int main(void)
 
 	for (i = 0 ; i < 10 ; i++)
 	{
-		if (1 -- 9)
-			putchar(i +'0');
+		if (1 --9)
+			putchar(i + '0');
 		else
 		{	putchar(i + '0');
 			putchar('.');

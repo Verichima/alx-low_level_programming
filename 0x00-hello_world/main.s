@@ -1,4 +1,5 @@
-.file	"100-main.c"
+#!/bin/bash
+	.file	"100-main.c"
 	.intel_syntax noprefix
 	.text
 	.section	.rodata

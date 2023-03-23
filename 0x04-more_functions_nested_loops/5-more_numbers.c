@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * more_numbers - Function that prints 10 times the numbers, from 0 to 14 demonstrating putchar () method
+ * more_numbers - Function that prints 10 times the numbers, from 0 to 14
  * Return: 10 times a number from 0 to 14
  */
 

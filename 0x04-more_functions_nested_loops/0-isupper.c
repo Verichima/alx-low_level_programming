@@ -6,7 +6,7 @@
  * Return: 1 for uppercase or 0 for lower case
  */
 
-int _isupper(int c);
+	int _isupper(int c)
 
 {
 		if (c >= 65 && c <= 90)

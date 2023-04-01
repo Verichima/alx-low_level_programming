@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - major variable
- * Return: Nothing
- */
-
 int main(void)
 {
 	int n;

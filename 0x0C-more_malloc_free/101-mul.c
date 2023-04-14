@@ -5,7 +5,7 @@
 
 /**
  * is_digit - Function to check content of file
- * @s: the string0 be evaluated
+ * @s: the string be evaluated
  * Return: 0 if non-digit is found else 1
  */
 int is_digit(char *s)
@@ -68,7 +68,6 @@ int main(int argc, char *argv[])
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
-
 	cap1 = _strlen(s1);
 	cap2 = _strlen(s2);
 	cap = cap1 + cap2 + 1;

@@ -5,7 +5,7 @@
 
 /**
  * is_digit - Function to check content of file
- * @S: the string0 be evaluated
+ * @s: the string0 be evaluated
  * Return: 0 if non-digit is found else 1
  */
 int is_digit(char *s)
@@ -25,7 +25,7 @@ int is_digit(char *s)
  * _strlen - return length of a string
  * @s: string
  *
- * Return length of string
+ * Return: length of string
  */
 
 int _strlen(char *s)

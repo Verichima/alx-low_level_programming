@@ -60,7 +60,7 @@ void errors(void)
 
 int main(int argc, char *argv[])
 {
-	char *s1, *s2 = argv[2];
+	char *s1, *s2;
 	int cap1, cap2, cap, a, carry, digit1, digit2, *result, b = 0;
 
 	s1 = argv[1], s2 = argv[2];
@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 		return (1);
 	for (a = 0; a <= cap1 + cap2; a++)
 		result[a] = 0;
-	for (cap1 = cap1 - 1; cap1 >= 0; cap2--)
+	for (cap1 = cap1 - 1; cap1 >= 0; cap1--)
 	{
 		digit1 = s1[cap1] - '0';
 		carry = 0;

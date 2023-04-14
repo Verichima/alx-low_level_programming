@@ -41,6 +41,8 @@ int _strlen(char *s)
 
 /**
  * errors - handles errors for main
+ *
+ * Return: void
  */
 
 void errors(void)

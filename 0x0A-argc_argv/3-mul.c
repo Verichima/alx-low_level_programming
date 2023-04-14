@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 
 	digit1 = _atoi(argv[1]);
 	digit2 = _atoi(argv[2]);
-	final = digit1 *digit2;
+	final = digit1 * digit2;
 
 	printf("%d\n", final);
 

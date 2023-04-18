@@ -10,8 +10,7 @@
 
 int _strlen(char *s)
 {
-	int a;
-	a = 0;
+	int a = 0;
 
 	while (s[a] != '\0')
 	{
@@ -30,8 +29,7 @@ int _strlen(char *s)
 
 char *_strcpy(char *dest, char *src)
 {
-	int d, a;
-	d = 0;
+	int d = 0, a;
 
 	while (src[d] != '\0')
 	{

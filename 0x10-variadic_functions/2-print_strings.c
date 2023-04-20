@@ -4,7 +4,7 @@
 
 /**
  * print_strings - function that prints strings
- * @separator: the string to be printed between the strings
+ * @separator: the string to be printed
  * @n: the number of strings passed to the function
  * @...: Another value to be passed to the function
  */
@@ -20,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		alphabet = va_arg(words, char *);
 		if (alphabet == NULL)
-			printf("nil");
+			printf("(nil)");
 		else
 			printf("%s", alphabet);
 

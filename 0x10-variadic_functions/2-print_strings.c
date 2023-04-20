@@ -7,6 +7,9 @@
  * @separator: the string to be printed between the strings
  * @n: the number of strings passed to the function
  * @...: Another value to be passed to the function
+ *
+ * Description: If separator is NULL, don’t print it
+ * If one of the string is NULL, print (nil) instead
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -20,7 +23,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		alphabet = va_arg(words, char *);
 		if (alphabet == NULL)
-			printf("nil)");
+			printf("nil");
 		else
 			printf("%s", alphabet);
 

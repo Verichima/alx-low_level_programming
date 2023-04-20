@@ -4,7 +4,7 @@
 
 /**
  * print_all - Function that prints anything
- * @const format: List of types of argument passed to the function
+ * @format: List of types of argument passed to the function
  * @...: More arguments
  */
 
@@ -45,6 +45,6 @@ void print_all(const char * const format, ...)
 		}
 	}
 
-	printf("\n");
 	va_end(spell);
+	printf("\n");
 }

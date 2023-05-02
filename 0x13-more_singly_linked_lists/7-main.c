@@ -13,21 +13,6 @@ int main(void)
 	listint_t *head;
 	listint_t *node;
 
-	#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include "lists.h"
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	listint_t *head;
-	listint_t *node;
-
 	head = NULL;
 	add_nodeint_end(&head, 0);
 	add_nodeint_end(&head, 1);

@@ -3,7 +3,7 @@
 /**
  * free_listint_safe - Function that frees a listint_t
  * @h: value input in the linked list
- * Returns: the size of the list that was freed
+ * Return: the size of the list that was freed
  */
 
 size_t free_listint_safe(listint_t **h)

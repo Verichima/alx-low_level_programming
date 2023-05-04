@@ -8,8 +8,9 @@ size_t print_listint_safe(const listint_t *head);
  * looped_listint_len - function that counts the number of unique nodes
  * @head: A pointer to the head of the listint_t to check.
  *
- * Return: If the list is not looped is -0.
+ * Return: If the list is not looped is less than 0.
  */
+
 size_t looped_listint_len(const listint_t *head)
 {
 	const listint_t *up, *down;
@@ -32,7 +33,7 @@ size_t looped_listint_len(const listint_t *head)
 				up = up->next;
 				down = down->next;
 			}
-			
+
 			up = up->next;
 			while (up != down)
 			{
@@ -56,6 +57,7 @@ size_t looped_listint_len(const listint_t *head)
  *
  * Return: The number of nodes in the list.
  */
+
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nodes, tag = 0;
@@ -84,4 +86,3 @@ size_t print_listint_safe(const listint_t *head)
 
 	return (nodes);
 }
-

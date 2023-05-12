@@ -1,10 +1,10 @@
+#include <stdio.h>
 #include <elf.h>
 #include <stdlib.h>
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
-#include <stdio.h>
 
 
 void check_elf(unsigned char *e_ident);
@@ -19,7 +19,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf(int elf);
 
 /**
- * check_elf - Function used to check if a file is an ELF file.
+ * check_elf - Function that checks if a file is an ELF file.
  * @e_ident: A pointer that contains the ELF magic numbers.
  */
 
@@ -49,7 +49,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int index;
 
-	printf(" Magic: ");
+	printf("  Magic:   ");
 
 	for (index = 0; index < EI_NIDENT; index++)
 	{
@@ -63,13 +63,13 @@ void print_magic(unsigned char *e_ident)
 }
 
 /**
- * print_class - Prints the class of an ELF header.
+ * print_class - Function that prints the class of an ELF header.
  * @e_ident: A pointer that contains the ELF class.
  */
 
 void print_class(unsigned char *e_ident)
 {
-	printf(" Class: ");
+	printf("  Class:                             ");
 
 	switch (e_ident[EI_CLASS])
 	{
@@ -88,13 +88,13 @@ void print_class(unsigned char *e_ident)
 }
 
 /**
- * print_data - Prints the data of an ELF header.
+ * print_data - Function that prints the data of an ELF header.
  * @e_ident: A pointer that contains the ELF class.
  */
 
 void print_data(unsigned char *e_ident)
 {
-	printf(" Data: ");
+	printf("  Data:                              ");
 
 	switch (e_ident[EI_DATA])
 	{
@@ -119,8 +119,8 @@ void print_data(unsigned char *e_ident)
 
 void print_version(unsigned char *e_ident)
 {
-	 printf(" Version: %d",
-			  e_ident[EI_VERSION]);
+	printf("  Version:                           %d",
+	       e_ident[EI_VERSION]);
 
 	switch (e_ident[EI_VERSION])
 	{
@@ -134,13 +134,13 @@ void print_version(unsigned char *e_ident)
 }
 
 /**
- * print_osabi - Function tha prints the OS/ABI of an ELF header.
+ * print_osabi - Function that prints the OS/ABI of an ELF header.
  * @e_ident: A pointer that contains the ELF version.
  */
 
 void print_osabi(unsigned char *e_ident)
 {
-	printf(" OS/ABI: ");
+	printf("  OS/ABI:                            ");
 
 	switch (e_ident[EI_OSABI])
 	{
@@ -186,14 +186,14 @@ void print_osabi(unsigned char *e_ident)
 
 void print_abi(unsigned char *e_ident)
 {
-	printf(" ABI Version: %d\n",
-		e_ident[EI_ABIVERSION]);
+	printf("  ABI Version:                       %d\n",
+	       e_ident[EI_ABIVERSION]);
 }
 
 /**
  * print_type - Function that prints the type of an ELF header.
- * @e_type: Represents the ELF type.
- * @e_ident: Represents a pointer that contains the ELF class.
+ * @e_type: The ELF type.
+ * @e_ident: A pointer that contains the ELF class.
  */
 
 void print_type(unsigned int e_type, unsigned char *e_ident)
@@ -201,7 +201,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
 
-	printf(" Type: ");
+	printf("  Type:                              ");
 
 	switch (e_type)
 	{
@@ -227,13 +227,13 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 
 /**
  * print_entry - Function that prints the entry point of an ELF header.
- * @e_entry: Represents the address of the ELF entry point.
+ * @e_entry: The address of the ELF entry point.
  * @e_ident: A pointer that contains the ELF class.
  */
 
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
-	printf(" Entry point address: ");
+	printf("  Entry point address:               ");
 
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
@@ -251,7 +251,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 
 /**
  * close_elf - Function that closes an ELF file.
- * @elf: Represents the file descriptor of the ELF file.
+ * @elf: The file descriptor of the ELF file.
  */
 
 void close_elf(int elf)
@@ -265,11 +265,11 @@ void close_elf(int elf)
 }
 
 /**
- * main - To displays the information in the ELF header
+ * main - To display the information contained in the ELF header.
  * @argc: Represents the number of arguments supplied to the program.
- * @argv: An array to the arguments.
+ * @argv: Represents an array of pointers to the arguments.
  *
- * Return: 0 if successful.
+ * Return: 0 when successful
  */
 
 int main(int __attribute__((__unused__)) argc, char *argv[])
@@ -314,4 +314,3 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	close_elf(a);
 	return (0);
 }
-
